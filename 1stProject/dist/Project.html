@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Building Materials</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+
+    <style>
+        .scrollbar-hide {
+          -ms-overflow-style: none; 
+          scrollbar-width: none; 
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+          display: none; 
+        }
+      </style>
+
+
+
+
+</head>
+<body class="bg-gradient-to-r from-white via-purple-300 to-blue-300">
+      <!-- Header -->
+      <header class="bg-white shadow">
+        <div class="container mx-auto flex justify-between items-center py-4 px-6">
+          <div class="flex items-center  ">
+            <img src="logo000000.png" alt="Logo" class="h-20">
+            <h1 class="ml-3 text-xl font-bold">Octacrest Builders</h1>
+          </div>
+          <div class="hidden md:flex space-x-4 ">
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Home</a>
+            <!-- <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Building Material</a> -->
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Categories </a>
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">About Us</a>
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Gallery</a>
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Videos</a>
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Testimonials</a>
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Contact Us</a>
+          </div>
+          <div class="hidden md:flex items-center space-x-4">
+           
+            <span class="text-gray-700 hover:text-red-500 font-bold">Malad West</span>
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Log In</a>
+            <a href="#" class="text-gray-700 hover:text-red-500 font-bold">Sign Up</a>
+          </div>
+        </div>
+      </header>
+    
+      <!-- Main Banner -->
+      <section class="relative bg-gradient-to-r from-white via-white to-white ">
+        <div class="container mx-auto flex flex-col md:flex-row items-center py-12 px-40">
+          <div class="md:w-1/2 mb-8 md:mb-0 bg-clip-padding">
+            <h2 class="text-4xl font-bold mb-4">Impeccable Quality </h2>
+            <p class="text-xl text-gray-600 mb-6">BUILDING MATERIALS</p>
+            <button class="bg-red-500 text-white py-2 px-6 rounded-lg hover:bg-red-600">Enquire Now</button>
+          </div>
+          <div class="md:w-1/2 flex justify-center">
+            <img src="logo222.png" alt="Building Materials" class="w-full h-2/4">
+          </div>
+        </div>
+      </section>
+    
+      <!-- Building Material Section -->
+      <section class="bg-white py-12">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8">Categories</h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+              <img src="sand.png" alt="Sand" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold">Sand</h3>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+              <img src="cement.png" alt="Cement" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold">Cement</h3>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+              <img src="wallputty.png" alt="Steel" class="w-full h-48 object-cover rounded-lg mb-4">
+              <h3 class="text-xl font-bold">wall-putty</h3>
+            </div>
+            <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <img src="tmt.png" alt="Sand" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">TMT Bar</h3>
+              </div>
+              <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <img src="Bricks.png" alt="Cement" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Bricks</h3>
+              </div>
+              <div class="bg-gray-100 p-6 rounded-lg shadow">
+                <img src="Stoone.png" alt="Steel" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Crushed Stone</h3>
+              </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- Featured Products Section -->
+      <section class="bg-gray-50 py-12 relative">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8">Products</h2>
+          <div class="relative">
+            <button id="left-arrow" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10">
+              &larr;
+            </button>
+            <button id="right-arrow" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10">
+              &rarr;
+            </button>
+            <div id="scroll-container" class="flex overflow-x-auto scrollbar-hide gap-6">
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="gitti.png" alt="Aggregate Crushed Rock" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Aggregate Crushed Rock</h3>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 mt-2">✉Send Enquiry</button>
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="6inch.png" alt="6 inch Red Bricks" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">6 inch Red Bricks</h3>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 mt-2">✉Send Enquiry</button>
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="tmt2.png" alt="VisionIndia TMT Bars" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">VisionIndia TMT Bars</h3>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 mt-2">✉Send Enquiry</button>
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="alvester.png" alt="Premium Concrete Sand" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Aelvester</h3>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 mt-2">✉Send Enquiry</button>
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="wallputty.png" alt="Asian Paint Wall Putty" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Asian Paint Wall Putty</h3>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 mt-2">✉Send Enquiry</button>
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="cement.png" alt="Ultra Tech Cement 50kg" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Ultra Tech Cement 50kg</h3>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 mt-2">✉Send Enquiry</button>
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="riversand.png" alt="Brown Rough River Sand" class="w-full h-48 object-cover rounded-lg mb-4">
+                <h3 class="text-xl font-bold">Brown Rough River Sand</h3>
+                <button class="bg-red-500 text-white py-2 px-4 rounded-lg hover:bg-red-600 mt-2 ">✉Send Enquiry</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    
+      <!-- About Us Section -->
+      <section class="bg-white py-12">
+        <div class="container mx-auto text-center">
+          <div class="md:w-2/3 mx-auto">
+            <h2 class="text-3xl font-bold mb-8">About Us</h2>
+            <div class="w-full flex justify-center mb-8">
+              <img src="about2.png" alt="About Us" class="w-full h-auto rounded-lg shadow">
+            </div>
+            <p class="text-lg text-gray-600 mb-4 font-semibold">
+              Our company, Octacrest Builders, situated at Malad West, Mumbai, Maharashtra, is a leading name engaged in providing a highly commendable range of building materials to our valued clients. Our offered products are widely recognized by our clients for their high durability, supreme finishing, and longer service life. We offer these ranges of products at the most reasonable price.
+            </p>
+            <p class="text-lg text-gray-600 mb-4 font-semibold">
+              You can buy right from cement, TMT steel, M Sand, fine aggregates, ready mix concrete, coarse aggregates, clay bricks, concrete blocks, lightweight blocks, block jointing mortar and much more. Our expert team has vast experience in large-scale construction project management, who will always help you in assisting you to buy the right product at the right price. Our growth is driven by continuous improvement in our services aimed to simplify your purchases while buying any construction material from us.
+            </p>
+          </div>
+        </div>
+      </section>
+    
+    <!-- Gallery -->
+    <section class="bg-gray-50 py-12 relative">
+        <div class="container mx-auto text-center">
+          <h2 class="text-3xl font-bold mb-8">Gallery</h2>
+          <div class="relative">
+            <button id="left-arrow" class="absolute left-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10">
+              &larr;
+            </button>
+            <button id="right-arrow" class="absolute right-0 top-1/2 transform -translate-y-1/2 bg-gray-800 text-white p-2 rounded-full z-10">
+              &rarr;
+            </button>
+            <div id="scroll-container" class="flex overflow-x-auto scrollbar-hide gap-6">
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="gitti.png" alt="Aggregate Crushed Rock" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="6inch.png" alt="6 inch Red Bricks" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="tmt2.png" alt="VisionIndia TMT Bars" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="alvester.png" alt="Premium Concrete Sand" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="wallputty.png" alt="Asian Paint Wall Putty" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="cement.png" alt="Ultra Tech Cement 50kg" class="w-full h-48 object-cover rounded-lg mb-4">
+              </div>
+              <div class="flex-shrink-0 max-w-xs">
+                <img src="riversand.png" alt="Brown Rough River Sand" class="w-full h-48 object-cover rounded-lg mb-4">
+                            </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+<!-- video -->
+<section class="bg-white py-12">
+    <div class="container mx-auto p-4">
+        <h2 class="text-3xl font-bold mb-6 text-center">Videos</h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4 mb-8">
+            <div class="bg-gradient-to-r from-white via-purple-300 to-blue-300 p-4 rounded-lg shadow">
+                <iframe class="w-full h-48" src="video.mp4" frameborder="0" allowfullscreen></iframe>
+                <h3 class="mt-2 text-center font-semibold">All About TMT Bars</h3>
+            </div>
+            <div class="bg-gradient-to-r from-white via-purple-300 to-blue-300 p-4 rounded-lg shadow">
+                <iframe class="w-full h-48" src="video.mp4" frameborder="0" allowfullscreen></iframe>
+                <h3 class="mt-2 text-center font-semibold">Types Of Bricks Used For Construction</h3>
+            </div>
+            <div class="bg-gradient-to-r from-white via-purple-300 to-blue-300 p-4 rounded-lg shadow">
+                <iframe class="w-full h-48" src="video.mp4" frameborder="0" allowfullscreen></iframe>
+                <h3 class="mt-2 text-center font-semibold">Steel as a Building Material</h3>
+            </div>
+            <div class="bg-gradient-to-r from-white via-purple-300 to-blue-300 p-4 rounded-lg shadow">
+                <iframe class="w-full h-48" src="video.mp4" frameborder="0" allowfullscreen></iframe>
+                <h3 class="mt-2 text-center font-semibold">What Are The Building Materials?</h3>
+            </div>
+        </div>
+        <div class="flex items-center justify-center h-screen">
+            <div class="bg-white shadow-lg rounded-lg overflow-hidden w-4/5 max-w-5xl flex">
+              <div class="w-1/3 flex-shrink-0 flex items-center justify-center">
+                <img src="cement22.png" alt="Cement Bags" class=" py-12 object-cover">
+              </div>
+              
+              <div class="w-2/3 p-8 relative overflow-hidden">
+                <div class="absolute inset-0 flex items-center">
+                  <div class="w-full scrolling-comments flex space-x-6">
+                    <div class="w-full">
+                      <p class="text-gray-600">"<strong>Pankaj Sharma</strong> They provide a wide range of superior quality building materials."</p>
+                    </div>
+                    <div class="w-full">
+                      <p class="text-gray-600">"<strong>Rahul Mehra</strong> Certainly 5 stars. They provided excellent quality cement at reasonable prices."</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>  
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <div class="backgroud container mx-auto p-4">
+    
+    <div class="bg-gradient-to-r from-white via-purple-300 to-blue-300 shadow-lg rounded-lg p-6 mb-8">
+      <div class="flex flex-wrap">
+        <div class="w-full md:w-1/2 lg:w-1/3 p-4">
+          <h2 class="text-xl font-bold mb-4">Contact Us</h2>
+          <ul class="space-y-4">
+            <li>
+              <h3 class="font-semibold">🌎Our Office Address</h3>
+              <p>Palm Court Bldg M, 501/B, 5th Floor, New Link Road, Beside Goregaon Sports Complex, Malad West, Mumbai, Maharashtra 400064</p>
+            </li>
+            <li>
+              <h3 class="font-semibold">📝General Enquiries</h3>
+              <p>websupport@justdial.com</p>
+            </li>
+            <li>
+              <h3 class="font-semibold"> ☎︎ Call Us</h3>
+              <p>+91-8888888888</p>
+            </li>
+            <li>
+              <h3 class="font-semibold">🕒Our Timing</h3>
+              <p>Mon - Sun : 10:00 AM - 07:00 PM</p>
+            </li>
+          </ul>
+        </div>
+        <div class="w-full md:w-1/2 lg:w-2/3 p-4 flex items-center justify-center">
+          <form class="w-full max-w-lg bg-blue-400 shadow-md rounded-lg p-6">
+            <div class="mb-4">
+              <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="text" placeholder="YOUR NAME">
+            </div>
+            <div class="mb-4">
+              <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="email" placeholder="YOUR EMAIL">
+            </div>
+            <div class="mb-4">
+              <input class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" type="text" placeholder="YOUR CONTACT NO.">
+            </div>
+            <div class="mb-4">
+              <textarea class="w-full px-3 py-2 border rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" rows="4" placeholder="YOUR MESSAGE"></textarea>
+            </div>
+            <div class="flex justify-center">
+              <button class="bg-blue-600 text-white px-4 py-2 rounded-md hover:bg-blue-700">Submit</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <!-- Map Section -->
+    <div class=" bg-red-500 relative h-96">
+      <iframe class="w-full h-full rounded-lg" src="https://www.openstreetmap.org/export/embed.html?bbox=72.84679794311525%2C19.179024218854835%2C72.88812637329102%2C19.2069586822114&amp;layer=mapnik" style="border:0;"></iframe>
+      <button class="absolute top-4 left-4 bg-blue-600 text-white px-3 py-2 rounded-md shadow-lg">Get Direction</button>
+    </div>
+  </div>
+
+  <footer class="bg-gradient-to-r from-white via-purple-300 to-blue-300 py-6 mt-8">
+    <div class="container mx-auto text-center text-gray-600">
+      <div class="mb-4">
+        <a href="#" class="text-blue-600 hover:underline">HOME</a> |
+        <a href="#" class="text-blue-600 hover:underline">CATEGORIES</a> |
+        <a href="#" class="text-blue-600 hover:underline">PRODUCTS</a> |
+        <a href="#" class="text-blue-600 hover:underline">ABOUT US</a> |
+        <a href="#" class="text-blue-600 hover:underline">MORE</a>
+      </div>
+      <p>&copy; Copyrights 2020 - 2021. Empire Constructions. All Rights Reserved.</p>
+      <p>Powered by Justdial</p>
+    </div>
+  </footer>
+
+
+
+
+
+      <script>
+        const scrollContainer = document.getElementById('scroll-container');
+        const leftArrow = document.getElementById('left-arrow');
+        const rightArrow = document.getElementById('right-arrow');
+        let scrollInterval;
+    
+        function scrollStep(direction) {
+          const maxScrollLeft = scrollContainer.scrollWidth - scrollContainer.clientWidth;
+          const scrollAmount = direction === 'right' ? scrollContainer.offsetWidth : -scrollContainer.offsetWidth;
+    
+          if (direction === 'right' && scrollContainer.scrollLeft >= maxScrollLeft) {
+            scrollContainer.scrollTo({ left: 0, behavior: 'smooth' });
+          } else if (direction === 'left' && scrollContainer.scrollLeft <= 0) {
+            scrollContainer.scrollTo({ left: maxScrollLeft, behavior: 'smooth' });
+          } else {
+            scrollContainer.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+          }
+        }
+    
+        rightArrow.addEventListener('click', () => scrollStep('right'));
+        leftArrow.addEventListener('click', () => scrollStep('left'));
+    
+        function startAutoScroll() {
+          scrollInterval = setInterval(() => scrollStep('right'), 2000);
+        }
+    
+        function stopAutoScroll() {
+          clearInterval(scrollInterval);
+        }
+    
+        scrollContainer.addEventListener('mouseover', stopAutoScroll);
+        scrollContainer.addEventListener('mouseout', startAutoScroll);
+    
+        startAutoScroll();
+      </script>
+   
+</body>
+</html>
