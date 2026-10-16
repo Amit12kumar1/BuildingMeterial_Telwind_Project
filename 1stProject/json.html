@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>json code practice </title>
+</head>
+<body>
+    <!--json   -
+    used for data exchange between client and server -
+    Structure: key-value pairs. similar to object in javascript.
+    -->
+
+  <!-- Student attendence system 
+   so student name so is present and not present and mark attendance and delete student from the list
+ -->
+   <h1>Student Attendance System</h1>
+    <input type="text" id="name" placeholder="Enter student name">
+    
+    <ul id="studentList"></ul>
+
+    <button onclick="markAttendance()">Mark Attendance</button>
+    <input type="radio" id="present" name="attendance" value="present">
+    <label for="present">Present</label>
+    <input type="radio" id="absent" name="attendance" value="absent">
+    <label for="absent">Absent</label>
+    <button onclick="addStudent()">Add Student</button>
+    <br>
+    button show attendance report status
+    <button onclick="showAttendanceReport()">Show Attendance Report</button>
+
+
+
+
+    
+<script>
+   //so student name so is present and not present and mark attendance and delete student from the list
+   let students = [];
+   function addStudent() {
+       const nameInput = document.getElementById('name');
+       const name = nameInput.value.trim();
+       const attendance = document.querySelector('input[name="attendance"]:checked');
+       if (!name) {
+           alert('Please enter a student name.');
+           return;
+       }
+       if (!attendance) {
+           alert('Please select Present or Absent.');
+           return;
+       }
+
+       students.push({ name: name, present: attendance.value === 'present' });
+       renderStudentList();
+       nameInput.value = '';
+       attendance.checked = false;
+   }
+
+   function renderStudentList() {
+       const studentList = document.getElementById('studentList');
+       studentList.innerHTML = '';
+       students.forEach((student, index) => {
+           const listItem = document.createElement('li');
+           const status = document.createElement('span');
+           status.textContent = `${student.name} - Attendance: ${student.present ? 'Present' : 'Absent'} `;
+           const deleteButton = document.createElement('button');
+           deleteButton.type = 'button';
+           deleteButton.textContent = 'Delete';
+           deleteButton.addEventListener('click', () => deleteStudent(index));
+           listItem.append(status, deleteButton);
+           studentList.appendChild(listItem);
+       });
+   }
+   function markAttendance(index) {
+       if (index === undefined || !students[index]) return;
+       students[index].present = !students[index].present;
+       renderStudentList();
+   }    
+   function deleteStudent(index) {
+       if (index === undefined || !students[index]) return;
+       students.splice(index, 1);
+       renderStudentList();
+   }
+   function showAttendanceReport() {
+       const report = students.map(student => `${student.name}: ${student.present ? 'Present' : 'Absent'}`).join('\n');
+       alert(report);
+   }
+
+    
+</script>
+
+</body>
+</html>
